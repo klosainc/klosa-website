@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion Request - Klosa</title>
+    <meta name="description" content="Request deletion of your personal data from Klosa">
+    <link rel="icon" type="image/svg+xml" href="fav.svg">
+    <link rel="apple-touch-icon" href="fav.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .deletion-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 140px 20px 80px;
+            background: #0F172A;
+        }
+        .deletion-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, #F8FAFC, var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .deletion-subtitle {
+            color: var(--text-gray);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .deletion-info {
+            background: var(--dark-card);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            margin-bottom: 2rem;
+        }
+        .deletion-info h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .deletion-info p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .deletion-info ul {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .deletion-info ul li {
+            margin-bottom: 0.5rem;
+        }
+        .deletion-form-container {
+            background: var(--dark-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .deletion-form-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 8px;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .form-note {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(20, 184, 166, 0.3);
+        }
+        .success-alert {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid #22C55E;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            display: none;
+        }
+        .success-alert p {
+            color: #22C55E;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Klosa_logo.svg" alt="Klosa" height="28">
+                    </a>
+                </div>
+                <nav class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="index.html#contact">Contact</a>
+                </nav>
+                <button class="btn-primary waitlist-btn">Join Waitlist</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Data Deletion Content -->
+    <section class="deletion-content">
+        <h1 class="deletion-title">Data Deletion Request</h1>
+        <p class="deletion-subtitle">We respect your privacy and your right to control your personal data. Submit a request below to delete your data from Klosa.</p>
+
+        <!--<div class="deletion-info">
+            <h2>What happens when you request data deletion?</h2>
+            <p>When you submit a data deletion request, we will:</p>
+            <ul>
+                <li>Verify your identity to protect your privacy</li>
+                <li>Delete all personal data associated with your account</li>
+                <li>Remove your transaction history and payment information</li>
+                <li>Deactivate your account permanently</li>
+                <li>Send you a confirmation email within 30 days</li>
+            </ul>
+            <p><strong>Please note:</strong> This action is irreversible. Once your data is deleted, you will not be able to recover your account or any associated information.</p>
+        </div>-->
+
+        <div class="deletion-form-container">
+            <h2 class="deletion-form-title">Submit Your Request</h2>
+            <form id="deletionForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="Email associated with your Klosa account">
+                    <p class="form-note">This should be the email you used to register your Klosa account</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone number (optional)">
+                </div>
+
+                <div class="form-group">
+                    <label for="reason">Reason for Deletion (Optional)</label>
+                    <select id="reason" name="reason">
+                        <option value="">Select a reason</option>
+                        <option value="no_longer_needed">No longer need the service</option>
+                        <option value="privacy_concerns">Privacy concerns</option>
+                        <option value="switching_service">Switching to another service</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalInfo">Additional Information (Optional)</label>
+                    <textarea id="additionalInfo" name="additionalInfo" placeholder="Any additional details you'd like to share..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Deletion Request</button>
+
+                <div id="successAlert" class="success-alert">
+                    <p>✅ Your data deletion request has been submitted successfully. We will process your request and send a confirmation email to your registered address within 30 days.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Klosa_logo.svg" alt="Klosa" height="26">
+                    </div>
+                    <p class="footer-tagline">How the diaspora supports their families back home</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61578958076993" target="_blank" aria-label="Facebook">Facebook</a>
+                        <a href="https://www.linkedin.com/company/klosa-inc/about/?viewAsMember=true" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="https://www.youtube.com/@KlosaInc" target="_blank" aria-label="YouTube">YouTube</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="data-deletion.html">Data Deletion</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@klosa.app">hello@klosa.app</a></li>
+                        <li><a href="mailto:privacy@klosa.app">privacy@klosa.app</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Klosa. All rights reserved. Licensed cross-border financial services provider.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlistModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 class="modal-title">Join the Waitlist</h2>
+            <p class="modal-subtitle">Be among the first to experience Klosa when we launch.</p>
+            <form id="waitlistForm" class="waitlist-form">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number (optional)">
+                <select name="country" required>
+                    <option value="">Where do you send money to?</option>
+                    <option value="GH">Ghana</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="KE">Kenya</option>
+                    <option value="OTHER">Other</option>
+                </select>
+                <button type="submit" class="btn-primary btn-block">Join Waitlist</button>
+            </form>
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p>✅ Thank you! You're on the waitlist. We'll notify you when Klosa launches.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Handle data deletion form submission
+        const deletionForm = document.getElementById('deletionForm');
+        const successAlert = document.getElementById('successAlert');
+
+        deletionForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(deletionForm);
+            const data = {
+                fullName: formData.get('fullName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                reason: formData.get('reason'),
+                additionalInfo: formData.get('additionalInfo'),
+                timestamp: new Date().toISOString()
+            };
+
+            // In production, send this to your backend
+            console.log('Data deletion request:', data);
+
+            // Simulate API call
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            // Show success message
+            deletionForm.style.display = 'none';
+            successAlert.style.display = 'block';
+
+            // Optional: Send to your backend or email service
+            // await fetch('YOUR_BACKEND_URL/api/data-deletion-request', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(data)
+            // });
+
+            // Scroll to success message
+            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>
