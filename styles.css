@@ -102,10 +102,11 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 140px 0 80px;
+    padding: 140px 0 120px;
     background: #0F172A;
     position: relative;
     overflow: hidden;
+    height: 1000px;
 }
 
 .hero-content {
@@ -174,23 +175,23 @@ body {
 
 .phone-image-container {
     position: relative;
-    max-width: 400px;
+    max-width: 900px;
     width: 100%;
-    height: 600px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .phone-screenshot {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 140%;
     height: auto;
-    max-height: 600px;
     object-fit: contain;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     background: transparent;
+    transform: scale(1.4);
 }
 
 .phone-screenshot.active {
